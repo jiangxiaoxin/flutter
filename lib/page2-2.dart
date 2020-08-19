@@ -49,7 +49,7 @@ class _NewsListPageState extends State<NewsListPage> {
   int getRandomItemCount() {
     final _random = Math.Random();
     final index = _random.nextInt(20);
-    return Math.max(index, 6);
+    return Math.max(index, 10);
   }
 
   @override

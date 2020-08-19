@@ -22,10 +22,10 @@ class MyApp extends StatelessWidget {
       ),
 //      home: MyHomePage(title: 'home page'),
 //    home: EvaluationPage(),
-//    home: NewsListPage(),
+    home: NewsListPage(),
 //    home: IndustryListPage(),
 //    home: RegionListPage(),
-    home: SolutionListPage(),
+//    home: SolutionListPage(),
 //    home: TextPage(),
     );
 
@@ -44,6 +44,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   String dropValue = "1";
+
 
   List<DropdownMenuItem<String>> getDropdownItems() {
     return ['1', '2', '3', '4']
