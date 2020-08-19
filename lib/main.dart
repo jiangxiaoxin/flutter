@@ -4,6 +4,7 @@ import 'package:flutter_app/page2-2.dart';
 import 'package:flutter_app/page2-3.dart';
 import 'package:flutter_app/page2-4.dart';
 import 'package:flutter_app/page2-5.dart';
+import 'package:flutter_app/text.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
 //    home: IndustryListPage(),
 //    home: RegionListPage(),
     home: SolutionListPage(),
+//    home: TextPage(),
     );
 
   }

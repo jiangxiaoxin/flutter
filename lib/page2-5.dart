@@ -53,13 +53,12 @@ class _SolutionListPageState extends State<SolutionListPage> {
           title: Text("产品解决方案"),
         ),
         body: Container(
-            padding: EdgeInsets.only(top: 17, bottom: 17), // 整体的上下有个padding。整体的bottom有个17，每个gridview放在padding里，bottom有个19，这样整体上最下面空白36，gridview之间又正好离开19
-            decoration: BoxDecoration(
-//              color: Color.fromRGBO(245,245,245,1)
-                ),
             child: ListView.builder(
               itemCount: listItemCount,
               itemBuilder: (BuildContext context, int index) {
+                double paddingTop = index == 0 ? 17 : 0;
+                double paddingBottom = index == listItemCount-1 ? 36 : 19;
+//                print("paddingBottom:$paddingBottom, index:$index");
                 return Container(
                   padding:
                       EdgeInsets.only(left: 15, right: 15), //整体有个左右的padding
@@ -68,7 +67,7 @@ class _SolutionListPageState extends State<SolutionListPage> {
                       Row(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(bottom: 13),
+                            padding: EdgeInsets.only(bottom: 13, top: paddingTop), // 不能给页面整体加paddingtop和paddingbottom，那样滚动时明显上下两块有空间是不动的
                             child: Text(
                               "行业解决方案_$index",
                               style: TextStyle(
@@ -79,36 +78,31 @@ class _SolutionListPageState extends State<SolutionListPage> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.only(bottom: 19),
+                        padding: EdgeInsets.only(bottom: paddingBottom),
                         child: GridView.builder(
                           shrinkWrap: true,
                           itemCount: gridItemCount,
                           physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
-                                  mainAxisSpacing: 11,
-                                  crossAxisSpacing: 11,
-                                  childAspectRatio: 0.779 // 这个不设置就会有默认值1.0，width和height相等，而gridview设置好后会自动计算出width，再按照这个得出height，而不是按照子元素加起来有多高来算
-                                ),
+                          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              mainAxisSpacing: 11,
+                              crossAxisSpacing: 11,
+                              childAspectRatio:
+                                  0.779 // 这个不设置就会有默认值1.0，width和height相等，而gridview设置好后会自动计算出width，再按照这个得出height，而不是按照子元素加起来有多高来算
+                              ),
                           itemBuilder: (context, index) {
                             return Container(
                               decoration: BoxDecoration(
-                                  // color: Colors.white,
-                                  // color: Colors.green,
-                                  // border: Border.all(color: Colors.red, width: 1.0),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color.fromRGBO(0, 0, 0, 0.1),
-                                      // color: Colors.red,
-                                      offset: Offset(2, 2),
-                                      blurRadius: 4.0,
-                                      // spreadRadius: 4.0
-                                    )
-                                  ]
-                                ),
+                                // color: Colors.white,
+//                                color: Colors.redAccent,
+//                                border:
+//                                    Border.all(color: Colors.red, width: 1.0),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8)),
+                              ),
                               child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Row(
                                     // 放到一个Row里才能让后面让图片占满宽
@@ -122,6 +116,7 @@ class _SolutionListPageState extends State<SolutionListPage> {
                                             getRandomItem(imgs),
                                             height: 140,
                                             fit: BoxFit.cover,
+                                            isAntiAlias: true,
                                           ),
                                         ),
                                       ),
@@ -136,16 +131,13 @@ class _SolutionListPageState extends State<SolutionListPage> {
                                         borderRadius: BorderRadius.only(
                                             bottomLeft: Radius.circular(8),
                                             bottomRight: Radius.circular(8)),
-                                        // boxShadow: [
-                                        //   BoxShadow(
-                                        //     color: Color.fromRGBO(0, 0, 0, 0.1),
-                                        //     // color: Colors.red,
-                                        //     offset: Offset(2, 2),
-                                        //     blurRadius: 5.0,
-                                        //     // spreadRadius: 4.0
-                                        //   )
-                                        // ]
-                                      ),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Color.fromRGBO(0, 0, 0, 0.1),
+                                            offset: Offset(0, 1.5),
+                                            blurRadius: 4.0,
+                                          )
+                                        ]),
                                     child: Column(
                                       children: [
                                         Row(
