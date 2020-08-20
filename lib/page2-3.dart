@@ -51,16 +51,18 @@ class _IndustryListState extends State<IndustryListPage> {
         ),
       ),
       body: Container(
-        padding: EdgeInsets.only(top: 17, bottom: 25, left: 15, right: 15),
+        padding: EdgeInsets.only(left: 15, right: 15),
         decoration: BoxDecoration(
           color: Color.fromRGBO(245,245,245,1)
 //        color: Colors.red
         ),
         child: ListView.builder(
+          padding: EdgeInsets.only(bottom: 25, top: 17),
           itemCount: itemCount,
           itemBuilder: (BuildContext context, int index) {
             if(index == 0) {
               return Container(
+//                padding: EdgeInsets.only(top: 17),
 //                decoration: BoxDecoration(
 //                  color: Colors.red
 //                ),
@@ -73,6 +75,12 @@ class _IndustryListState extends State<IndustryListPage> {
                 ),
               );
             } else {
+              // 25
+//              double bottom = 0;
+//              if (index == itemCount - 1) {
+//                bottom = 25;
+//              }
+
               return Container(
                 margin: EdgeInsets.only(top: 17),
 //                decoration: BoxDecoration(
