@@ -62,19 +62,20 @@ class _NewsListPageState extends State<NewsListPage> {
         ),
       ),
       body: ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+//        padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 15),
+      padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 0),
         itemCount: _itemCount,
         itemBuilder: (BuildContext context, int index){
-          EdgeInsets margin;
-          if (index == 0) {
-            margin = EdgeInsets.only(bottom: 7.5);
-          } else if (index == _itemCount-1) {
-            margin = EdgeInsets.only(top: 7.5);
-          } else {
-            margin = EdgeInsets.symmetric(vertical: 7.5);
-          }
+//          EdgeInsets margin;
+//          if (index == 0) {
+//            margin = EdgeInsets.only(bottom: 7.5);
+//          } else if (index == _itemCount-1) {
+//            margin = EdgeInsets.only(top: 7.5);
+//          } else {
+//            margin = EdgeInsets.symmetric(vertical: 7.5);
+//          }
           return Container(
-            margin: margin,
+            margin: EdgeInsets.only(bottom: 15),
             child: Row(
               children: [
                 /// item左侧图片
