@@ -179,59 +179,113 @@ class _AboutPageState extends State<AboutPage> {
 //                                    Border.all(color: Colors.red, width: 1.0),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(8))),
-                            child: Column(
+//                            child = image + text
+                            child: Stack(
                               children: [
-                                Container(
-                                  padding: EdgeInsets.only(top: 15, bottom: 15),
-                                  child: Center(
-                                    child: Image.network(
-                                      "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1598237275&di=80f99285efaeac64d3f7357af3cd22c2&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
-                                      width: 40,
-                                      height: 40,
-                                      fit: BoxFit.cover,
+                                Column(
+                                  children: [
+                                    Container(
+                                      padding:
+                                          EdgeInsets.only(top: 15, bottom: 15),
+                                      child: Center(
+                                        child: Image.network(
+                                          "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1598237275&di=80f99285efaeac64d3f7357af3cd22c2&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
+                                          width: 40,
+                                          height: 40,
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
                                     ),
-                                  ),
+                                    Container(
+                                      padding:
+                                          EdgeInsets.only(left: 10, right: 10),
+                                      child: Text(
+                                        "卡奥斯是全球首个引入用户全流程参与体验的工业互联网平台，打造模块化、云化形成交互定制、开放创新、精准营销、模块采购、智能制造、智慧物流和智慧服务7大模块系列产品矩阵，实践大规模定制模式，并持续为企业赋能。",
+                                        style: TextStyle(
+                                            color: Color(0xff666666),
+                                            fontSize: 14),
+                                      ),
+                                    )
+                                  ],
                                 ),
-                                Container(
-                                  padding: EdgeInsets.only(left: 10, right: 10),
-                                  child: Text(
-                                    "卡奥斯是全球首个引入用户全流程参与体验的工业互联网平台，打造模块化、云化形成交互定制、开放创新、精准营销、模块采购、智能制造、智慧物流和智慧服务7大模块系列产品矩阵，实践大规模定制模式，并持续为企业赋能。",
-                                    style: TextStyle(
-                                        color: Color(0xff666666), fontSize: 14),
-                                  ),
+                                Positioned(
+                                  left: 7,
+                                  top: 7,
+                                  child: ClipOval(
+                                      child: Container(
+                                    width: 7,
+                                    height: 7,
+                                    color: Colors.blue,
+                                  )),
+                                ),
+                                Positioned(
+                                  right: 7,
+                                  top: 7,
+                                  child: ClipOval(
+                                      child: Container(
+                                    width: 7,
+                                    height: 7,
+                                    color: Colors.blue,
+                                  )),
                                 )
                               ],
                             ),
                           ),
                           Container(
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(8))),
-                            child: Column(
-                              children: [
-                                Container(
-                                  padding: EdgeInsets.only(top: 15, bottom: 15),
-                                  child: Center(
-                                    child: Image.network(
-                                      "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1598237275&di=80f99285efaeac64d3f7357af3cd22c2&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
-                                      width: 40,
-                                      height: 40,
-                                      fit: BoxFit.cover,
-                                    ),
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(8))),
+                              child: Stack(
+                                children: [
+                                  Column(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                            top: 15, bottom: 15),
+                                        child: Center(
+                                          child: Image.network(
+                                            "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1598237275&di=80f99285efaeac64d3f7357af3cd22c2&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
+                                            width: 40,
+                                            height: 40,
+                                            fit: BoxFit.cover,
+                                          ),
+                                        ),
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                            left: 10, right: 10),
+                                        child: Text(
+                                          "卡奥斯已经孕育出职业教育、房车、农业、模具、教育、服装等15个行业生态，在全国建立了7大中心，包括山东半岛经济带中心、长三角一体化中心、京津冀中心、粤港澳大湾区中心、长江中游经济带中心、川渝经济带中心、关中平原经济带中心，覆盖全国12大区域，并在20个国家复制推广。",
+                                          style: TextStyle(
+                                              color: Color(0xff666666),
+                                              fontSize: 14),
+                                        ),
+                                      )
+                                    ],
                                   ),
-                                ),
-                                Container(
-                                  padding: EdgeInsets.only(left: 10, right: 10),
-                                  child: Text(
-                                    "卡奥斯已经孕育出职业教育、房车、农业、模具、教育、服装等15个行业生态，在全国建立了7大中心，包括山东半岛经济带中心、长三角一体化中心、京津冀中心、粤港澳大湾区中心、长江中游经济带中心、川渝经济带中心、关中平原经济带中心，覆盖全国12大区域，并在20个国家复制推广。",
-                                    style: TextStyle(
-                                        color: Color(0xff666666), fontSize: 14),
+                                  Positioned(
+                                    left: 7,
+                                    top: 7,
+                                    child: ClipOval(
+                                        child: Container(
+                                      width: 7,
+                                      height: 7,
+                                      color: Colors.blue,
+                                    )),
                                   ),
-                                )
-                              ],
-                            ),
-                          )
+                                  Positioned(
+                                    right: 7,
+                                    top: 7,
+                                    child: ClipOval(
+                                        child: Container(
+                                      width: 7,
+                                      height: 7,
+                                      color: Colors.blue,
+                                    )),
+                                  )
+                                ],
+                              ))
                         ],
                       ),
                     ),
