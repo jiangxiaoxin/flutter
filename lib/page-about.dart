@@ -301,9 +301,51 @@ class _AboutPageState extends State<AboutPage> {
                   "2019年，卡奥斯以357.17亿元的品牌价值，挺进中国品牌价值百强榜，成为唯一入榜的工业互联网平台。卡奥斯平台被国家工信部认定为跨行业、跨领域的工业互联网十大“双跨”平台之首，而且位居全球知名机构Forrester工业互联网领导者第一象限。",
                   style: TextStyle(color: Color(0xff666666), fontSize: 14),
                 ),
-              )
+              ),
+//              下面带一行icon的字
+              Container(
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.only(
+                            left: 20, top: 20, right: 20, bottom: 25),
+                        child: Text(
+                          "卡奥斯先后主导和参与了31项国家标准、6项国际标准的制定，是唯一被IEEE、ISO、IEC三大国际组织批准牵头制定大规模定制模式标准的单位，成为全球公认的大规模定制领域标准的制定者和主导者。卡奥斯成为唯一在全球同一国家拥有2家灯塔工厂的企业，并牵头世界5家灯塔工厂发布了《灯塔工厂汉诺威倡议》，为全球企业转型升级提供方法论。",
+                          style:
+                              TextStyle(color: Color(0xff666666), fontSize: 14),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 30),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Image.network(
+                              "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1597649417&di=57084f26a40f3ec7208d043a90217931&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
+                              width: 78,
+                              height: 90,
+                              fit: BoxFit.cover,
+                            ),
+                            Image.network(
+                              "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1597649417&di=57084f26a40f3ec7208d043a90217931&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
+                              width: 78,
+                              height: 90,
+                              fit: BoxFit.cover,
+                            ),
+                            Image.network(
+                              "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1597649417&di=57084f26a40f3ec7208d043a90217931&src=http://a3.att.hudong.com/14/75/01300000164186121366756803686.jpg",
+                              width: 78,
+                              height: 90,
+                              fit: BoxFit.cover,
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  )),
             ],
-          )
+          ),
         ],
       ),
     );
