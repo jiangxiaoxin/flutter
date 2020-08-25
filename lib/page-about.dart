@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -346,6 +348,343 @@ class _AboutPageState extends State<AboutPage> {
                   )),
             ],
           ),
+//          发展历程的标题
+          Container(
+            width: double.infinity,
+            height: 58,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: NetworkImage(
+                      "https://t7.baidu.com/it/u=3616242789,1098670747&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1598332109&t=8e1956e5dd844930f5db86504e301861",
+                    ),
+                    fit: BoxFit.cover)),
+            child: Center(
+              child: Text("发展历程",
+                  style: TextStyle(color: Colors.white, fontSize: 17)),
+            ),
+          ),
+//          这下面就是发展历程时间线了
+          Container(
+            color: Color(0xffecf5ff),
+//            一个item就是一年的所有
+            child: ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+//                    年份:"2020年"
+                    Container(
+//                      color: Colors.red,
+                      width: MediaQuery.of(context).size.width,
+                      padding: EdgeInsets.only(left: 15, top: 21, bottom: 9),
+                      child: Text(
+                        "2020年",
+                        textAlign: TextAlign.left,
+                        style:
+                            TextStyle(color: Color(0xff0084FF), fontSize: 18),
+                      ),
+                    ),
+//                  每个月份的
+                    Container(
+                        margin: EdgeInsets.only(left: 22),
+                        padding: EdgeInsets.only(bottom: 14),
+                        decoration: BoxDecoration(
+                            color: Colors.green,
+                            border: Border(
+                                left: BorderSide(
+                                    width: 1, color: Color(0xff0084ff)))),
+                        child: Stack(
+                          overflow: Overflow.visible,
+                          children: [
+                            Row(
+                              children: [
+//                            “12月”
+                                Container(
+//                                  color: Colors.yellow,
+                                  decoration: BoxDecoration(
+                                    color: Colors.yellow,
+//                                      border: Border(
+//                                          left: BorderSide(
+//                                              color: Color(0xffecf5ff),
+//                                              width: 1))
+                                  ),
+                                  padding: EdgeInsets.only(
+                                      left: 12, right: 16, top: 5),
+                                  child: Text(
+                                    "12月",
+                                    style: TextStyle(
+                                        color: Color(0xff0084ff), fontSize: 15),
+                                  ),
+                                ),
+//                            12月的大事件描述文字
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(right: 19),
+                                    padding: EdgeInsets.only(
+                                        left: 15,
+                                        right: 15,
+                                        top: 13,
+                                        bottom: 19),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Text(
+                                      "2020年6月27日，央视《新闻联播》头条报道海尔卡奥斯稳定提升产业链的样板案例。2020年6月29日，工信部《通信产业报》公布《2020工业互联网新基建先锋榜TOP30》海尔卡奥斯排名第一。",
+                                      style: TextStyle(
+                                          color: Color(0xff666666),
+                                          fontSize: 14),
+                                    ),
+                                  ),
+                                )
+                              ],
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: -7,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 14,
+                                  height: 14,
+                                  color: Color(0xff9cd0ff),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 13,
+                              left: -4,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 8,
+                                  height: 8,
+                                  color: Color(0xff0084ff),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(left: 22),
+                        padding: EdgeInsets.only(bottom: 14),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                left: BorderSide(
+                                    width: 1, color: Color(0xff0084ff)))),
+                        child: Stack(
+                          overflow: Overflow.visible,
+                          children: [
+                            Row(
+                              children: [
+//                            “12月”
+                                Container(
+//                                  color: Colors.yellow,
+                                  padding: EdgeInsets.only(
+                                      left: 12, right: 16, top: 5),
+                                  child: Text(
+                                    "9月",
+                                    style: TextStyle(
+                                        color: Color(0xff0084ff), fontSize: 15),
+                                  ),
+                                ),
+//                            12月的大事件描述文字
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(right: 19),
+                                    padding: EdgeInsets.only(
+                                        left: 15,
+                                        right: 15,
+                                        top: 13,
+                                        bottom: 19),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Text(
+                                      "2020年6月27日，央视《新闻联播》头条报道海尔卡奥斯稳定提升产业链的样板案例。2020年6月29日，工信部《通信产业报》公布《2020工业互联网新基建先锋榜TOP30》海尔卡奥斯排名第一。",
+                                      style: TextStyle(
+                                          color: Color(0xff666666),
+                                          fontSize: 14),
+                                    ),
+                                  ),
+                                )
+                              ],
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: -7,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 14,
+                                  height: 14,
+                                  color: Color(0xff9cd0ff),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 13,
+                              left: -4,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 8,
+                                  height: 8,
+                                  color: Color(0xff0084ff),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(left: 22),
+                        padding: EdgeInsets.only(bottom: 14),
+                        decoration: BoxDecoration(
+//                          左侧的蓝色边框
+//                            color: Colors.red,
+                            border: Border(
+                                left: BorderSide(
+                                    width: 1, color: Color(0xff0084ff)))),
+                        child: Stack(
+                          overflow: Overflow.visible,
+                          children: [
+                            Row(
+                              children: [
+//                            “12月”
+                                Container(
+//                                  color: Colors.yellow,
+                                  padding: EdgeInsets.only(
+                                      left: 12, right: 16, top: 5),
+                                  child: Text(
+                                    "8月",
+                                    style: TextStyle(
+                                        color: Color(0xff0084ff), fontSize: 15),
+                                  ),
+                                ),
+//                            12月的大事件描述文字
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(right: 19),
+                                    padding: EdgeInsets.only(
+                                        left: 15,
+                                        right: 15,
+                                        top: 13,
+                                        bottom: 19),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Text(
+                                      '2020年5月8日，海尔卡奥斯"疫情物资和复工复产大数据平台解决方案"入选工信部《支撑疫情防控和复工复产复课大数据产品和解决方案名单》。2020年5月28日，海尔卡奥斯工业互联网平台入选中国科学院《互联网周刊》2020值得关注的工业互联网平台，位居榜首，也是连续三年入选并位列榜首。',
+                                      style: TextStyle(
+                                          color: Color(0xff666666),
+                                          fontSize: 14),
+                                    ),
+                                  ),
+                                )
+                              ],
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: -7,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 14,
+                                  height: 14,
+                                  color: Color(0xff9cd0ff),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 13,
+                              left: -4,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 8,
+                                  height: 8,
+                                  color: Color(0xff0084ff),
+                                ),
+                              ),
+                            ),
+                          ],
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(
+                            left: 22,
+                            bottom:
+                                14), //TODO:这里要对年度的月份数做判断，第一个和最后一个item要特殊处理margin和padding，其余中间的是一样的
+//                        padding: EdgeInsets.only(bottom: 14),
+                        decoration: BoxDecoration(
+                            border: Border(
+                                left: BorderSide(
+                                    width: 1, color: Color(0xff0084ff)))),
+                        child: Stack(
+                          overflow: Overflow.visible,
+                          children: [
+                            Row(
+                              children: [
+//                            “12月”
+                                Container(
+//                                  color: Colors.yellow,
+                                  padding: EdgeInsets.only(
+                                      left: 12, right: 16, top: 5),
+                                  child: Text(
+                                    "1月",
+                                    style: TextStyle(
+                                        color: Color(0xff0084ff), fontSize: 15),
+                                  ),
+                                ),
+//                            12月的大事件描述文字
+                                Expanded(
+                                  child: Container(
+                                    margin: EdgeInsets.only(right: 19),
+                                    padding: EdgeInsets.only(
+                                        left: 15,
+                                        right: 15,
+                                        top: 13,
+                                        bottom: 19),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Text(
+                                      "2020年4月7日，海尔卡奥斯入选中国科学院《互联网周刊》《2020新基建分类排行榜》，位列《2020工业互联网平台企业排行》榜首。",
+                                      style: TextStyle(
+                                          color: Color(0xff666666),
+                                          fontSize: 14),
+                                    ),
+                                  ),
+                                )
+                              ],
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                            ),
+                            Positioned(
+                              top: 10,
+                              left: -7,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 14,
+                                  height: 14,
+                                  color: Color(0xff9cd0ff),
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 13,
+                              left: -4,
+                              child: ClipOval(
+                                child: Container(
+                                  width: 8,
+                                  height: 8,
+                                  color: Color(0xff0084ff),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ))
+                  ],
+                );
+              },
+            ),
+          )
         ],
       ),
     );
