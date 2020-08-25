@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/evaluation.dart';
+import 'package:flutter_app/layout.dart';
 import 'package:flutter_app/page2-2.dart';
 import 'package:flutter_app/page2-3.dart';
 import 'package:flutter_app/page2-4.dart';
 import 'package:flutter_app/page2-5.dart';
+import 'package:flutter_app/stack.dart';
 import 'package:flutter_app/text.dart';
 import 'package:flutter_app/page-about.dart';
 
@@ -28,7 +30,9 @@ class MyApp extends StatelessWidget {
 //    home: RegionListPage(),
 //    home: SolutionListPage(),
 //      home: TextPage(),
-        home: AboutPage());
+//        home: AboutPage();
+//        home: StackPage()
+        home: LayoutPage());
   }
 }
 
