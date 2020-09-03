@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/appbar.dart';
+import 'package:flutter_app/button.dart';
+import 'package:flutter_app/clip.dart';
 import 'package:flutter_app/evaluation.dart';
 import 'package:flutter_app/layout.dart';
 import 'package:flutter_app/page2-2.dart';
@@ -8,6 +11,12 @@ import 'package:flutter_app/page2-5.dart';
 import 'package:flutter_app/stack.dart';
 import 'package:flutter_app/text.dart';
 import 'package:flutter_app/page-about.dart';
+import 'package:flutter_app/textfield.dart';
+import 'package:flutter_app/stack2.dart';
+import 'package:flutter_app/animation/switcher.dart';
+import 'package:flutter_app/animation/test1.dart';
+import 'package:flutter_app/animation/test2.dart';
+import 'package:flutter_app/animation/test3.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,21 +27,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
 //      home: MyHomePage(title: 'home page'),
 //    home: EvaluationPage(),
 //    home: NewsListPage(),
 //      home: IndustryListPage(),
 //    home: RegionListPage(),
 //    home: SolutionListPage(),
-//      home: TextPage(),
-//        home: AboutPage();
+      home: TextPage(),
+//      home: ButtonPage(),
+//      home: TextFieldPage(),
+//        home: AboutPage()
 //        home: StackPage()
-        home: LayoutPage());
+//      home: StackPage2(),
+//        home: ClipPage()
+//      home: AnimatedSwitcherCounterRoute(),
+//      home: AnimatedWidgetsTest(),
+//      home: AnimationTest2(),
+//      home: AnimationTest3(),
+//      home: AppBarPage(),
+//      home: LayoutPage(),
+    );
   }
 }
 

@@ -43,9 +43,16 @@ class StackPage extends StatelessWidget {
           ),
           ClipOval(
             child: Container(
-              width: 300,
-              height: 300,
+              width: 100,
+              height: 100,
               color: Colors.green,
+            ),
+          ),
+          ClipOval(
+            child: Container(
+              width: 50,
+              height: 100,
+              color: Colors.cyanAccent,
             ),
           )
         ],

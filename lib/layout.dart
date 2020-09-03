@@ -5,27 +5,59 @@ class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("layout test"),
-      ),
-      body: Container(
-        color: Colors.green,
-        child: Container(
-          width: 200,
-          height: 200,
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(50),
-          decoration: BoxDecoration(
-              color: Colors.red,
-              border: Border.all(color: Colors.blue, width: 20)),
-          child: Center(
-            child: Text(
-              "aaa",
-              style: TextStyle(backgroundColor: Colors.yellow),
+        appBar: AppBar(
+          title: Text("layout test"),
+        ),
+        body:
+//        Text("xyz" * 37)
+            Container(
+          width: double.infinity,
+          height: 400,
+          color: Colors.green,
+          child: Align(
+            alignment: Alignment.center,
+            child: Wrap(
+              spacing: 10,
+              runSpacing: 20,
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+                Container(
+                  width: 100,
+                  height: 100,
+                  color: Colors.red,
+                ),
+              ],
             ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
