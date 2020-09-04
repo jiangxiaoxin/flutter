@@ -17,6 +17,10 @@ import 'package:flutter_app/animation/switcher.dart';
 import 'package:flutter_app/animation/test1.dart';
 import 'package:flutter_app/animation/test2.dart';
 import 'package:flutter_app/animation/test3.dart';
+import 'package:flutter_app/clip2.dart';
+import 'package:flutter_app/flex.dart';
+import 'package:flutter_app/wrap.dart';
+import 'package:flutter_app/step.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,12 +43,16 @@ class MyApp extends StatelessWidget {
 //    home: RegionListPage(),
 //    home: SolutionListPage(),
 //      home: TextPage(),
-      home: ButtonPage(),
+//      home: ButtonPage(),
 //      home: TextFieldPage(),
 //        home: AboutPage()
 //        home: StackPage()
+      home: StepPage(),
 //      home: StackPage2(),
-//        home: ClipPage()
+//      home: ClipPage(),
+//      home: ClipPage2(),
+//      home: FlexPage(),
+//      home: WrapPage(),
 //      home: AnimatedSwitcherCounterRoute(),
 //      home: AnimatedWidgetsTest(),
 //      home: AnimationTest2(),
