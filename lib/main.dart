@@ -38,8 +38,8 @@ class MyApp extends StatelessWidget {
 //      home: IndustryListPage(),
 //    home: RegionListPage(),
 //    home: SolutionListPage(),
-      home: TextPage(),
-//      home: ButtonPage(),
+//      home: TextPage(),
+      home: ButtonPage(),
 //      home: TextFieldPage(),
 //        home: AboutPage()
 //        home: StackPage()

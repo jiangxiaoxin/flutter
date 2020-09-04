@@ -9,29 +9,33 @@ class ButtonPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Row(
-            children: [
-              Container(
-                color: Colors.red,
-                height: 100,
-              )
-            ],
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: RaisedButton(
+              child: Text("RaisedButton"),
+              onPressed: () {},
+            ),
           ),
-          RaisedButton(
-            child: Text("RaisedButton"),
-            onPressed: () {},
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: FlatButton(
+              child: Text("FlatButton"),
+              onPressed: () {},
+            ),
           ),
-          FlatButton(
-            child: Text("FlatButton"),
-            onPressed: () {},
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: OutlineButton(
+              child: Text("OutlineButton"),
+              onPressed: () {},
+            ),
           ),
-          OutlineButton(
-            child: Text("OutlineButton"),
-            onPressed: () {},
-          ),
-          RawMaterialButton(
-            child: Text("RawMaterialButton"),
-            onPressed: () {},
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+            child: RawMaterialButton(
+              child: Text("RawMaterialButton"),
+              onPressed: () {},
+            ),
           ),
           Image(
             image: NetworkImage(
