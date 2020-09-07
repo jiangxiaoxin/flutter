@@ -6,15 +6,13 @@ class StepPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Stepper(
-        steps: <Step>[
-          Step(
-              title: Text('2020-4-23'),
-              subtitle: Text("subtitle"),
-              content: Text('今天是2020-4-23'),
-              isActive: true),
-          Step(title: Text('2020-4-24'), content: Text('今天是2020-4-24')),
-          Step(title: Text('2020-4-25'), content: Text('今天是2020-4-25')),
-        ],
+        steps: List.generate(
+            10,
+            (index) => Step(
+                title: Text('index: $index'),
+                subtitle: Text("subtitle $index"),
+                content: Text('今天是2020-4-23'),
+                isActive: true)),
       ),
     );
   }

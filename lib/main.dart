@@ -21,6 +21,7 @@ import 'package:flutter_app/clip2.dart';
 import 'package:flutter_app/flex.dart';
 import 'package:flutter_app/wrap.dart';
 import 'package:flutter_app/step.dart';
+import 'package:flutter_app/container.dart';
 
 void main() {
   runApp(MyApp());
@@ -47,7 +48,8 @@ class MyApp extends StatelessWidget {
 //      home: TextFieldPage(),
 //        home: AboutPage()
 //        home: StackPage()
-      home: StepPage(),
+//      home: StepPage(),
+      home: ContainerPage(),
 //      home: StackPage2(),
 //      home: ClipPage(),
 //      home: ClipPage2(),
