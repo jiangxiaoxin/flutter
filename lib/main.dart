@@ -24,6 +24,7 @@ import 'package:flutter_app/step.dart';
 import 'package:flutter_app/container.dart';
 import 'package:flutter_app/row.dart';
 import 'package:flutter_app/sliver/test1.dart';
+import 'package:flutter_app/sliver/test2.dart';
 
 void main() {
   runApp(MyApp());
@@ -53,7 +54,8 @@ class MyApp extends StatelessWidget {
 //      home: StepPage(),
 //      home: ContainerPage(),
 //      home: RowPage(),
-      home: SliverPage1(),
+//      home: SliverPage1(),
+      home: SliverAppBarTestPage(),
 //      home: StackPage2(),
 //      home: ClipPage(),
 //      home: ClipPage2(),
